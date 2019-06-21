@@ -1,6 +1,7 @@
 import React from "react";
 
 import { COLORS } from "../utils/constants";
+import isBrowser from "../utils/isBrowser";
 
 const BackToTop: React.FunctionComponent = () => (
     <div
@@ -19,9 +20,9 @@ const BackToTop: React.FunctionComponent = () => (
                 transform: "scale(.9)",
             },
         }}
-        onClick={() => window.scroll({
+        onClick={() => isBrowser() && window.scroll({
             top: 0,
-            behavior: "smooth"
+            behavior: "smooth",
         })}
     >
         <img src="https://github.com/PrismLang.png" height="50" css={{

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import { COLORS } from "../../utils/constants";
+import isBrowser from "../../utils/isBrowser";
 
 import headerLinks from "../../data/headerLinks.yml";
 
@@ -13,7 +14,7 @@ const HeaderLogo: React.FunctionComponent = () => (
         color: COLORS.WHITE,
     }}>
         {
-            window.location.pathname === "/"
+            isBrowser() && window.location.pathname === "/"
             ? null
             :   <>
                     <img src="https://github.com/PrismLang.png" height="40" />
