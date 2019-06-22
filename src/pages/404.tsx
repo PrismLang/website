@@ -9,7 +9,10 @@ class NotFoundPage extends React.PureComponent {
     state = {};
 
     render = () => (
-        <Layout>
+        <Layout
+            title="Page not found"
+            description="The page you're looking for doesn't exist... The sadness."
+        >
             <div css={{
                 minHeight: "100vh",
                 padding: 25,

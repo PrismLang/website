@@ -5,7 +5,10 @@ import Layout from "../layouts/default";
 import { COLORS } from "../utils/constants";
 
 export default (props: any) => (
-    <Layout>
+    <Layout
+        title={ props.data.markdownRemark.frontmatter.title }
+        description={ props.data.markdownRemark.frontmatter.description }
+    >
         <div css={{
             display: "flex",
             justifyContent: "space-between",
