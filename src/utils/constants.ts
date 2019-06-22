@@ -11,7 +11,8 @@ const COLORS = {
     LIGHT: "#f0f0f0",
     LIGHT_GREY: "#bbbbbb",
     GREY: "grey",
-    DARK: "#111111",
+    DARK: "#222222",
+    DARKER: "#111111",
     BLACK: "#000000",
 };
 
