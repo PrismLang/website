@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import Layout from "../layouts/default";
+import Logo from "../components/Logo";
 import { COLORS } from "../utils/constants";
 
 class NotFoundPage extends React.PureComponent {
@@ -28,9 +29,7 @@ class NotFoundPage extends React.PureComponent {
                     fontSize: "10em",
                 }}>
                     <span css={{ marginRight: -30, }}>4</span>
-                    <img src="https://github.com/PrismLang.png" height="200" css={{
-                        filter: "drop-shadow(0 15px 150px " + COLORS.BORDER_DARK + ")",
-                    }} />
+                    <Logo size="200" />
                     <span css={{ marginLeft: -30, }}>4</span>
                 </div>
                 <p>The page you're looking for doesn't exist... The sadness.</p>

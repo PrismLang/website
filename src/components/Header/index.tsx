@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import Logo from "../Logo";
 import { COLORS } from "../../utils/constants";
 import isBrowser from "../../utils/isBrowser";
 
@@ -17,7 +18,7 @@ const HeaderLogo: React.FunctionComponent = () => (
             isBrowser() && window.location.pathname === "/"
             ? null
             :   <>
-                    <img src="https://github.com/PrismLang.png" height="40" />
+                    <Logo size="40" />
                     <div css={{
                         marginLeft: 3,
                         textTransform: "uppercase",

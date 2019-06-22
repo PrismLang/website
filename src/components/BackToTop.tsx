@@ -1,6 +1,6 @@
 import React from "react";
 
-import { COLORS } from "../utils/constants";
+import Logo from "./Logo";
 import isBrowser from "../utils/isBrowser";
 
 const BackToTop: React.FunctionComponent = () => (
@@ -25,9 +25,7 @@ const BackToTop: React.FunctionComponent = () => (
             behavior: "smooth",
         })}
     >
-        <img src="https://github.com/PrismLang.png" height="50" css={{
-            filter: "drop-shadow(0 5px 25px " + COLORS.BORDER_DARK + ")",
-        }} />
+        <Logo size="50" />
     </div>
 );
 

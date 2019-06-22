@@ -1,6 +1,7 @@
 import React from "react";
 
 import Layout from "../layouts/default";
+import Logo from "../components/Logo";
 import { COLORS } from "../utils/constants";
 
 import binaries from "../data/binaries.yml";
@@ -20,7 +21,7 @@ class IndexPage extends React.PureComponent {
                 color: COLORS.WHITE,
                 textAlign: "center",
             }}>
-                <img src="https://github.com/PrismLang.png" height="200" />
+                <Logo size="200" />
                 <div css={{
                     padding: 25,
                     fontSize: "2em",
