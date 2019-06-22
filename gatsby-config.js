@@ -9,6 +9,15 @@ module.exports = {
     plugins: [
         "gatsby-plugin-emotion",
         "gatsby-plugin-react-helmet",
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+              name: "learn",
+              path: __dirname + "/content/learn/",
+              ignore: [ "**/\.*" ],
+            },
+        },
+        "gatsby-transformer-remark",
         "gatsby-plugin-typescript",
     ],
 };
