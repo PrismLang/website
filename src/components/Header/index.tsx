@@ -9,22 +9,26 @@ import headerLinks from "../../data/headerLinks.yml";
 
 
 const HeaderLogo: React.FunctionComponent = () => (
-    <div css={{
-        display: "flex",
-        alignItems: "center",
-        color: COLORS.WHITE,
-    }}>
+    <div>
         {
             isBrowser() && window.location.pathname === "/"
             ? null
-            :   <>
-                    <Logo size="40" />
-                    <div css={{
-                        marginLeft: 3,
-                        textTransform: "uppercase",
-                        fontSize: "1.5em",
-                    }}>P r i s m</div>
-                </>
+            : <Link to="/" css={{
+                display: "flex",
+                alignItems: "center",
+                color: COLORS.WHITE,
+                fontWeight: 400,
+                ":hover": {
+                    color: COLORS.WHITE,
+                },
+              }}>
+                <Logo size="40" />
+                <div css={{
+                    marginLeft: 3,
+                    textTransform: "uppercase",
+                    fontSize: "1.5em",
+                }}>P r i s m</div>
+              </Link>
         }
     </div>
 );
