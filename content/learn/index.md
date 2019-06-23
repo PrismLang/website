@@ -94,19 +94,62 @@ let language = "Prism";
 
 ### Lists
 
-Lists are very similar to arrays. They can contain any type of variables, and
-they can contain as many variables as you wish.
+Lists are very similar to arrays. They can contain any type of Prism data, and
+they can contain as many elements as you wish. The elements can be any valid
+Prism expression.
 
 In the example below, `magicNumbers` is a Prism list that contains both `Number`
-and `String` values.
+and `String` values as well as an expression.
 
 ```prism
-let magicNumbers = [ 1337, "0x8BADF00D", 42 ];
+let magicNumbers = [ 1337, "0x8BADF00D", 42, 10 + 3 ];
 ```
 
 List elements are indexed from 0 and can be accessed in the same way it's
 accessed in most languages.
 
 ```prism
-magicNumbers[1] # 0x8BADF00D
+magicNumbers[3] # 13
 ```
+
+### Hash Maps
+
+A hash map is a data type that works with keys and values. Each value in a hash
+map can be accessed using a key, which can be either Boolean, Integer, Character
+or String. This key is hashed to make a hash key and this hash key is what is
+actually mapped to the value. The keys and values can be any valid Prism
+expression. The only constraint is that the key expression should evaluate to
+any Hashable type - i.e. Boolean, Integer, Character or String.
+
+```prism
+let null = "0x00";
+
+let hashTable = {
+    "pound": '#',
+    42: "anything" + " & " + "everything",
+    10 + 3: "thirteen",
+    null: 0,
+};
+
+hashTable["0x00"];  # 0
+hashTable[13];      # thirteen
+```
+
+You can add values to the hash map even after you've initialized it and access
+it the same way as before:
+
+```prism
+hashTable["traction"] = "speed";
+hashTable["traction"]   # speed
+```
+
+And if you try to access a key that doesn't exist, Prism will return `None` to
+let you know that no value is mapped to that key:
+
+```prism
+hashTable["void"]   # None
+```
+
+One thing to note here is that hash maps are not ordered in the same way you've
+declare or initialize it. So, do not rely on their ordering while working with
+them.
