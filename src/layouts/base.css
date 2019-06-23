@@ -59,3 +59,10 @@ button:active {
   border-top-width: calc(.2rem + .0625rem);
   border-bottom-width: .0625rem;
 }
+
+code {
+  background-color: #222222;
+  color: #f0f0f0;
+  border-radius: 2px;
+  padding: 1px 5px;
+}
