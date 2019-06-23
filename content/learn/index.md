@@ -243,7 +243,7 @@ let outcome = if (choice == 42) {
     "You've the answer to the ultimate question of life, the universe, and everything";
 } else {
     "Keep looking for the answer.";
-}
+};
 
 println(outcome);
 ```
@@ -255,3 +255,23 @@ expression.
 
 Prism does not include a traditional [ternary operator](https://en.wikipedia.org/wiki/%3F:),
 instead favoring the use of conditional expressions.
+
+## Loops
+
+Looping in Prism can be done using the `until` expression. If you're familiar
+with other languages, it's similar to the `while` loop.
+
+If an expression wrapped in parentheses next to a `until` keyword evaluates to
+`true`, then code within that branch (i.e. the immediately-following code that
+is wrapped in curly braces) is executed, until the aforementioned expression
+evaluates to `false` - then the loop stops and execution goes to the next line.
+
+The following example will print all odd numbers from `1` to `13`.
+```prism
+let counter = 1;
+
+until (counter <= 13) {
+    println(counter);
+    counter = counter + 2;
+}
+```
