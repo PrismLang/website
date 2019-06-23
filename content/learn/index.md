@@ -275,3 +275,220 @@ until (counter <= 13) {
     counter = counter + 2;
 }
 ```
+
+## Functions
+
+You can group one or more expressions into a function. Rather than repeating
+the same series of expressions each time that you need a result, you can wrap
+the expressions in a function and call that function instead.
+
+In Prism, a function is an expression. To declare a function, use the `func`
+keyword followed by the types of inputs that your function takes, if any, and
+then assign it to a variable that will be the function name. A function's body
+is where you define expressions that are called when your function is invoked.
+
+Here's a complete Prism function that returns the absolute value of the passed
+number:
+
+```prism
+let getAbsolute = func (num) {
+    if (num < 0) {
+        return -num;
+    } else {
+        return num;
+    }
+}
+```
+
+The function in the example above has the name `getAbsolute`. It takes one
+`Number` as an input. It returns a result of type `Number`.
+
+To call a function, use its name, followed by the invocation operator (`()`)
+with the arguments it takes as inputs.
+
+Building on the previous example, the `outcome` variable is initialized with the
+result obtained from calling `getAbsolute` with `-13` as its arguments.
+
+```prism
+let outcome = getAbsolute(-13);
+println(outcome);   # 13
+```
+
+When declaring a function, you can specify any number of arguments (or no
+arguments at all). In the example above, `getAbsolute()` takes one argument
+named `num`. Within the function, you can refer to the argument by using its
+name.
+
+### Simplifying declarations
+
+`getAbsolute()` is a fairly simple function. The function checks a condition and
+then immediately returns. Utilizing the implicit returning of the result of the
+if-else expression contained in the function, we can simplify our function as
+shown in the following example:
+
+```prism
+let getAbsolute = func (num) {
+    return if (num < 0) {
+        -num;
+    } else {
+        num;
+    }
+}
+```
+
+Implicitly, functions in Prism returns the result of the expression on its
+final line, so you don't need to use a return keyword in such situations.
+So, we can further simplify the function as shown in the example below:
+
+```prism
+let getAbsolute = func (num) {
+    if (num < 0) {
+        -num;
+    } else {
+        num;
+    }
+}
+```
+
+### Anonymous Functions
+
+Not every function needs a name. Some functions are more directly identified by
+their inputs and outputs. These functions are called anonymous functions.
+Anonymous functions are generally used as arguments being passed to higher-order
+functions (more on that later), or used for constructing the result of a
+higehr-order function that needs to return a function.
+
+```prism
+func (num) {
+    num * 2
+}
+```
+
+You can keep a reference to an anonymous function, using this reference to call
+the anonymous function later. You can also pass the reference around your
+application, as with other reference types. It fulfills the same role for the
+function type as literals do for other data types.
+
+```prism
+let getDouble = func (num) {
+    num * 2
+}
+```
+
+As you might have guessed it by now, named functions in Prism are anonymous
+functions bound to an identifier. Functions are literals in Prism.
+
+### Higher-order Functions
+
+Functions that use other functions as arguments or return another function as
+its result are called higher-order functions. Prism functions supports both -
+taking another function as an argument and returning another function as its
+result. Therefore, all Prism functions are first-class functions (as it treats
+functions as first-class citizens).
+
+Here's an example of a higher-order function:
+
+```prism
+let funcWrapper = func (arg, fun) {
+    fun(arg)
+}
+```
+
+The `funcWrapper()` function takes two arguments - a literal `arg` and function
+`fun` - and returns the result of `fun()` which takes the `arg` as its input.
+
+You can call `funcWrapper()` by passing a literal and a function, as shown in
+the following example:
+
+```prism
+let outcome = funcWrapper(-42, getAbsolute);
+println(outcome);   # 42
+```
+
+In the example above, we call `funcWrapper()` with the arguments `-42` and the
+`getAbsolute()` function we defined previously and the output is assigned to the
+`outcome` variable.
+
+### Closures
+
+Functions being first-class citizens in Prism, they are able to form closures.
+A closure is the combination of a function and the lexical environment within
+which that function was declared. This environment consists of any local
+variables that were in-scope at the time the closure was created.
+
+```prism
+let multiplier = func (C) {
+    func (num) { num * C }
+}
+
+let multiplySeven = multiplier(7);
+let multiplyZero = multiplier(0);
+
+println(multiplySeven(191));    # 1337
+println(multiplyZero(1337));    # 0
+```
+
+In this example, we have defined a function `multiplier()`, which takes a single
+argument, `C`, and returns a new anonymous function. The function it returns
+takes a single argument, `num`, and returns the multiplication of `num` and `C`.
+
+In essence, `multiplier` is a function factory — it creates functions which can
+multiply a specific value to their argument. In the above example we use our
+function factory to create two new functions — one that multiplies `7` to its
+argument, and one that multiplies `0`.
+
+`multiplySeven` & `multiplyZero` are both closures. They share the same function
+body definition, but store different lexical environments. In `multiplySeven`'s
+lexical environment, `C` is `7`, while in the lexical environment for
+`multiplyZero`, `C` is `0`.
+
+Now, when we call `multiplySevel` with an argument of `191`, it multiplies it
+with the previously stored value `7` and returns the output `1337`. Similarly,
+`multiplyZero` returns `0`.
+
+### Immediately Invoked Function Expression
+
+If you're familiar with ECMAScript, you might already know this. Essentially, an
+immediately invoked function expression (or IIFE) is a function that runs as
+soon as it's defined.
+
+It can be used to protect against polluting the global environment and
+simultaneously allow public access to methods while retaining privacy for
+variables defined within the function.
+
+```prism
+func () {
+    # Statements
+}();
+```
+
+It contains two major parts. The first is the anonymous function so that the
+expressions defined inside the anonymous function doesn't pollute the global
+scope. The second part creates the immediately executing function expression
+`()` through which Prism will directly interpret the function.
+
+In the example below, the function becomes a function expression which is
+immediately executed. The variable within the expression can't be accessed from
+outside it:
+
+```prism
+func () {
+    let str = "I'm untouchable";
+    print(str);
+}();
+
+# Variable `str` is not accessible from the outside scope
+print(str); # NameError: `str` is not defined
+```
+
+Assigning the IIFE to a variable stores the function's return value, not the
+function definition itself.
+
+```prism
+let outcome = func () {
+    let str = "I'm untouchable!";
+    return str;
+}();
+
+print(outcome); # I'm untouchable!
+```
