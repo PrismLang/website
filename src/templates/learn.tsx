@@ -29,6 +29,9 @@ export default (props: any) => (
                 padding: 20,
                 width: "70vw",
                 backgroundColor: COLORS.WHITE,
+                "@media (max-width: 768px)": {
+                    width: "100%",
+                },
             }}>
                 <div css={{
                     margin: "0 auto",
@@ -45,6 +48,9 @@ export default (props: any) => (
                 padding: 40,
                 width: "30vw",
                 backgroundColor: COLORS.DARKER,
+                "@media (max-width: 768px)": {
+                    display: "none",
+                },
             }}>
                 <div
                     dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.tableOfContents.replace(/(href=")\/\/#/g, "$1#") }}
