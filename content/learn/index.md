@@ -213,3 +213,45 @@ println(!false);    # true
 println(!!13);      # true
 println(!"hello");  # false
 ```
+
+## Conditionals
+
+Prism currently only features *if-else* mechanisim for implementing conditional
+logic.
+If an expression wrapped in parentheses next to an `if` keyword evaluates to
+`true`, then code within that branch (i.e. the immediately-following code that
+is wrapped in curly braces) is executed. Otherwise, the code within the `else`
+branch is executed.
+
+```prism
+if (choice == 42) {
+    println("You've the answer to the ultimate question of life, the universe, and everything");
+} else {
+    println("Keep looking for the answer.");
+}
+```
+
+### Conditional Expressions
+
+Conditional statements are useful for representing stateful logic, but you may
+find that you repeat yourself when writing them. In the example above, you
+simply print a `String` in each branch. To avoid this repetition, Prism offers
+conditional expressions. The last example can be rewritten as follows:
+
+```prism
+let outcome = if (choice == 42) {
+    "You've the answer to the ultimate question of life, the universe, and everything";
+} else {
+    "Keep looking for the answer.";
+}
+
+println(outcome);
+```
+
+Implicitly, each conditional branch returns the result of the expression on its
+final line, so you don't need to use a return keyword. In this example,
+`outcome` is assigned an initial value from the result of the if-else
+expression.
+
+Prism does not include a traditional [ternary operator](https://en.wikipedia.org/wiki/%3F:),
+instead favoring the use of conditional expressions.
