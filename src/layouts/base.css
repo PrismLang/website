@@ -18,6 +18,9 @@ body {
     "Helvetica Now", "Helvetica Neue", "Segoe UI", sans-serif;
   font-size: 18px;
   background-color: white;
+  font-smooth: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -53,6 +56,6 @@ button:hover {
 }
 button:active {
   background-color: #5d37d8;
-	border-top-width: calc(.2rem + .0625rem);
-	border-bottom-width: .0625rem;
+  border-top-width: calc(.2rem + .0625rem);
+  border-bottom-width: .0625rem;
 }
