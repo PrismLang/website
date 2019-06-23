@@ -12,6 +12,9 @@ export default (props: any) => (
         <div css={{
             display: "flex",
             justifyContent: "space-between",
+            "h1, h2, h3, h4, h5, h6": {
+                marginTop: 50,
+            },
             "hr": {
                 border: "1px solid " + COLORS.LIGHT,
                 margin: 50,
@@ -23,7 +26,10 @@ export default (props: any) => (
                 overflowX: "auto",
                 borderRadius: 2,
                 boxShadow: "0 5px 20px -10px rgba(0, 0, 0, .5)",
-            }
+            },
+            "pre code": {
+                padding: 0,
+            },
         }}>
             <div css={{
                 padding: 20,
