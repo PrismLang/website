@@ -11,7 +11,8 @@ all of Prism and topics described here are explained in very simple terms -
 terms that might not be used by Prism internally to refer to them.
 Since Prism is currently not yet released to the public, the language can have
 drastical changes with every iteration and consequently this guide will have to
-change too. You need to have an open mind if you want to learn Prism in its early stage.
+change too. You need to have an open mind if you want to learn Prism in its early
+stage.
 
 ## Hello, world!
 
@@ -109,7 +110,7 @@ List elements are indexed from 0 and can be accessed in the same way it's
 accessed in most languages.
 
 ```prism
-magicNumbers[3] # 13
+magicNumbers[3]; # 13
 ```
 
 ### Hash Maps
@@ -140,16 +141,75 @@ it the same way as before:
 
 ```prism
 hashTable["traction"] = "speed";
-hashTable["traction"]   # speed
+hashTable["traction"];   # speed
 ```
 
 And if you try to access a key that doesn't exist, Prism will return `None` to
 let you know that no value is mapped to that key:
 
 ```prism
-hashTable["void"]   # None
+hashTable["void"];   # None
 ```
 
 One thing to note here is that hash maps are not ordered in the same way you've
 declare or initialize it. So, do not rely on their ordering while working with
 them.
+
+## Basic Operators
+
+### Arithmetic Operators
+
+Just as any other programming languages, the addition, subtraction,
+multiplication, and division operators can be used with numbers.
+
+```prism
+println(40 + (5 + 15) * 30 / 10);  # 100
+```
+
+The `+` operator can be used with `String`s to concatenate them:
+
+```prism
+println("Hello, " + "world!");  # Hello, world!
+```
+
+The unary `+` and `-` operators can be used to represent positive and negative
+numbers, respectively. Numbers are, by default, positive.
+
+```prism
+println(+42); # 42
+println(-13); # -13
+```
+
+These can be used with `Boolean` values too, since `true` evaluates to `1` and
+`false` evaluates to `0`.
+
+```prism
+println(-true); # -1
+println(false); # 0
+```
+
+### Relational Operators
+
+As with most other languages, the relational operators are used in Prism to
+check the relation between two operands:
+
+```prism
+println(13 == 42);  # false
+println(13 != 42);  # true
+println(13 > 42);   # false
+println(13 < 42);   # true
+println(13 >= 42);  # false
+println(13 <= 42);  # true
+```
+
+### Logical Operators
+
+The unary `!` operator is used as the negation operator in Prism, as with most
+other languages. It inverts the value (or logical state) of the expression's
+truthfulness.
+
+```prism
+println(!false);    # true
+println(!!13);      # true
+println(!"hello");  # false
+```
