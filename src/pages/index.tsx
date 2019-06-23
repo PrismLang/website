@@ -32,9 +32,9 @@ class IndexPage extends React.PureComponent {
                     maxWidth: 500,
                     padding: 25,
                 }}>
-                    Prism is dirty, ugly language held together by duct tape, cracked asbestos-filled
-                    spackle and sadness. It is a language that was born in the wild and raised in the
-                    darkness by a schizophrenic monkey. But it has got <code>character</code>; and in
+                    Prism is a language that was born in the wild and raised in the darkness
+                    by a schizophrenic monkey. It is held together by duct tape and cracked
+                    asbestos-filled spackle. But it has got <code>character</code>; and in
                     this world, that's enough.
                 </div>
             </div>
