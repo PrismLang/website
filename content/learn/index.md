@@ -49,7 +49,7 @@ an initial explicit value. In these cases, the variables are usually assigned
 following snippet is invalid:
 
 ```prism
-let response = null;
+let response = None;
 ```
 
 ### Boolean
