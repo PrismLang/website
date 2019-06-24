@@ -17,6 +17,14 @@ module.exports = {
               ignore: [ "**/\.*" ],
             },
         },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+              name: "docs",
+              path: __dirname + "/content/docs/",
+              ignore: [ "**/\.*" ],
+            },
+        },
         "gatsby-transformer-remark",
         "gatsby-plugin-typescript",
     ],
