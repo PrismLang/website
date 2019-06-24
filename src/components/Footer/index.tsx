@@ -56,6 +56,7 @@ const MetaFooter: React.FunctionComponent = () => (
     <div css={{
         padding: "2rem 8rem",
         display: "flex",
+        flexWrap: "wrap",
         justifyContent: "space-between",
         color: COLORS.GREY,
         fontSize: ".8em",
