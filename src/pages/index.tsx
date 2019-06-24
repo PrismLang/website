@@ -3,11 +3,20 @@ import React from "react";
 import Layout from "../layouts/default";
 import Logo from "../components/Logo";
 import { COLORS } from "../utils/constants";
+import getLastPushTime from "../utils/getLastPushTime";
 
 import installers from "../data/installers.yml";
 
 class IndexPage extends React.PureComponent {
-    state = {};
+    state = {
+        lastBuildDate: new Date(0),
+    };
+
+    componentDidMount = () => {
+        getLastPushTime()
+        .then(date => this.setState({ lastBuildDate: new Date(date) }))
+        .catch(() => {});
+    }
 
     render = () => (
         <Layout>
@@ -84,6 +93,15 @@ class IndexPage extends React.PureComponent {
                         ))
                     }
                 </div>
+                <p>
+                    <strong>
+                        {
+                            this.state.lastBuildDate
+                            ? "Last Updated on " + this.state.lastBuildDate.toDateString()
+                            : null
+                        }
+                    </strong>
+                </p>
             </div>
         </Layout>
     );
