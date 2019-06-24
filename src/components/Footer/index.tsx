@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
-import { FaGithub, FaReddit, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaReddit, FaStackOverflow, FaTwitter } from "react-icons/fa";
 
 import { COLORS } from "../../utils/constants";
 
@@ -30,6 +29,9 @@ const SocialLinks: React.FunctionComponent = () => (
         </SocialLink>
         <SocialLink link={{ title: "Reddit", href: "https://reddit.com/r/PrismLang" }}>
             <FaReddit />
+        </SocialLink>
+        <SocialLink link={{ title: "StackOverflow", href: "https://stackoverflow.com/questions/tagged/prismlang" }}>
+            <FaStackOverflow />
         </SocialLink>
     </div>
 );
