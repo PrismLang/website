@@ -44,6 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
             result.data.allMarkdownRemark.edges.forEach(({ node }) => {
                 let template;
                 switch (node.fields.source) {
+                    case "docs":
                     case "learn":
                         template = "./src/templates/learn.tsx";
                         break;
