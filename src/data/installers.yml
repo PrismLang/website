@@ -1,0 +1,7 @@
+---
+  - os: Linux
+    link: https://github.com/PrismLang/installer/raw/master/builds/prism-installer-linux
+  - os: macOS
+    link: https://github.com/PrismLang/installer/raw/master/builds/prism-installer-darwin
+  - os: Windows
+    link: https://github.com/PrismLang/installer/raw/master/builds/prism-installer-windows.exe
