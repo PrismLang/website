@@ -47,3 +47,15 @@ None
 >>> x
 50
 ```
+
+### Prism Installation Directory
+
+If you install Prism with the provided installer, it'll install the Prism
+binaries in the following path, depending on your operating system:
+
+* `/usr/bin/prism` - macOS and Linux based operating systems
+
+* `%SYSTEMROOT%\prism.exe` - Windows operating systems
+
+If you want to uninstall Prism, all you need to do is remove the aforementioned
+file and you're good to go.
