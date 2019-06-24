@@ -83,7 +83,7 @@ class IndexPage extends React.PureComponent {
                 }}>
                     {
                         installers.map((installer: any, i: number) => (
-                            <a href={ installer.link } css={{
+                            <a key={ i } href={ installer.link } css={{
                                 margin: 10,
                             }}>
                                 <button>

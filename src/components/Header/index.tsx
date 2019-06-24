@@ -61,7 +61,7 @@ const HeaderLinks: React.FunctionComponent<IHeaderLinks> = (props) => (
     }}>
         {
             props.links.map((link: IHeaderLink, i: number) =>
-                <HeaderLink to={ link.to } title={ link.title } />
+                <HeaderLink key={ i } to={ link.to } title={ link.title } />
             )
         }
     </nav>
