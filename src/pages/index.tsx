@@ -74,6 +74,15 @@ class IndexPage extends React.PureComponent {
                         To install Prism in your computer, run these installers as superuser/Administrator.
                     </strong>
                 </p>
+                <p>
+                    <strong>
+                        {
+                            this.state.lastBuildDate
+                            ? "Last Updated on " + this.state.lastBuildDate.toDateString()
+                            : null
+                        }
+                    </strong>
+                </p>
                 <div css={{
                     marginTop: 25,
                     marginBottom: 25,
@@ -94,13 +103,9 @@ class IndexPage extends React.PureComponent {
                     }
                 </div>
                 <p>
-                    <strong>
-                        {
-                            this.state.lastBuildDate
-                            ? "Last Updated on " + this.state.lastBuildDate.toDateString()
-                            : null
-                        }
-                    </strong>
+                    If you don't prefer the installer, you can grab the Prism binaries from
+                    <a href="https://github.com/PrismLang/binaries" target="_blank" title="Prism binaries"> here </a>
+                    and run it from wherever you like.
                 </p>
             </div>
         </Layout>
