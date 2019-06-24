@@ -4,7 +4,7 @@ import Layout from "../layouts/default";
 import Logo from "../components/Logo";
 import { COLORS } from "../utils/constants";
 
-import binaries from "../data/binaries.yml";
+import installers from "../data/installers.yml";
 
 class IndexPage extends React.PureComponent {
     state = {};
@@ -56,8 +56,14 @@ class IndexPage extends React.PureComponent {
                     you can download the prototype version for your platform and start using it.
                 </p>
                 <p>
-                    These binaries are updated on a regular basis. Keep track of the release date
-                    to stay on the latest version of Prism and get access to all latest features.
+                    The binaries are updated on a regular basis. Keep track of the release date and
+                    use these installers to update Prism every time a new version comes out to stay
+                    on the latest version of Prism and get access to all latest features.
+                </p>
+                <p>
+                    <strong>
+                        To install Prism in your computer, run these installers as superuser/Administrator.
+                    </strong>
                 </p>
                 <div css={{
                     marginTop: 25,
@@ -67,12 +73,12 @@ class IndexPage extends React.PureComponent {
                     justifyContent: "center",
                 }}>
                     {
-                        binaries.map((binary: any, i: number) => (
-                            <a href={ binary.link } css={{
+                        installers.map((installer: any, i: number) => (
+                            <a href={ installer.link } css={{
                                 margin: 10,
                             }}>
                                 <button>
-                                    { binary.os } { binary.arch }
+                                    { installer.os }
                                 </button>
                             </a>
                         ))
