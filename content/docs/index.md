@@ -53,7 +53,7 @@ None
 If you install Prism with the provided installer, it'll install the Prism
 binaries in the following path, depending on your operating system:
 
-* `/usr/bin/prism` - macOS and Linux based operating systems
+* `/usr/local/bin/prism` - macOS and Linux based operating systems
 
 * `%SYSTEMROOT%\prism.exe` - Windows operating systems
 
