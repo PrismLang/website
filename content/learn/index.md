@@ -492,3 +492,77 @@ let outcome = func () {
 
 print(outcome); # I'm untouchable!
 ```
+
+## Built-in Functions
+
+### `append()`
+
+The `append` function is used to append elements at the end of a `list`. It
+returns a new `list` with the new element appended to it and the original list
+remains unchanged.
+
+```prism
+let foods = [ "Pizza", "Burger" ];
+
+append(foods, "Donut");
+println(foods); # [Pizza, Burger]
+
+foods = append(foods, "Donut");
+println(foods); # [Pizza, Burger, Donut]
+```
+
+### `input()`
+
+The `input` function is used to take single line input from the user's standard
+input device. When the line with the `input()` is executed, it waits for the
+user to give an input and it returns the input from the user as a `string`.
+
+```prism
+>>> input()
+Hello, Prism!   # User input
+Hello, Prism!   # Return value
+```
+
+If you intend to store the input string, you can assign the `input()` to a
+variable and access it as you'd do with any other variables.
+
+```
+let message = input();  # User input: Hakuna Matata
+println(message);       # Hakuna Matata
+```
+
+And if you want the input prompt to be descriptive, you can do it by passing the
+prompt to the `input` function, as shown in the example below:
+
+```prism
+let name = input("What's your name? "); # User input: Traction
+println(name);                          # Traction
+```
+
+### `len()`
+
+The `len` function is used to find the length of lists, strings and characters
+(well, length of character will always be `1`).
+
+```prism
+let size = len([ 13, 42 ]);
+println(size);                  # 2
+
+let length = len("Starman");
+println(length);                # 7
+
+len numberOne = len('#');
+println(numberOne);             # 1
+```
+
+### `type()`
+
+The `type` function returns the data type of the object that's passed as the
+argument, as shown in the example below:
+
+```prism
+let dataType = type("Don't Panic");
+println(dataType);                  # STRING
+
+dataType = type({"Cyber": "Punk"});
+println(dataType);                  # HASH
