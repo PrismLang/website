@@ -66,3 +66,27 @@ code {
   border-radius: 2px;
   padding: 1px 5px;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .8em;
+}
+
+table thead tr {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+table tbody tr {
+  background-color: #f5f5f5;
+}
+
+table tr th {
+  text-align: left;
+  padding: 10px 15px;
+}
+
+table tr td {
+  padding: 5px 15px;
+}
