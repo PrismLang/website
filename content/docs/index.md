@@ -59,3 +59,39 @@ binaries in the following path, depending on your operating system:
 
 If you want to uninstall Prism, all you need to do is remove the aforementioned
 file and you're good to go.
+
+
+### Operator Precedence
+
+The following table summarizes the operator precedence in Prism, from highest
+precedence (most binding) to lowest precedence (least binding). Unless
+explicitly stated, operators are binary.
+
+<div style="overflow: auto; border-radius: 3px; border: 1px solid rgba(0, 0, 0, .1)">
+
+| Precedence    | Operator      | Description               | Associativity |
+| :-----------: | ------------- | ------------------------- | ------------- |
+| 0             | `()`          | Parentheses / Grouping    | Left-to-right |
+| 1             | `obj[index]`  | Subscription              | Left-to-right |
+| 2             | `f(args...)`  | Function call             | Left-to-right |
+| 3             | `~`           | Bitwise NOT               | Right-to-left |
+|               | `!`           | Logical NOT               | Right-to-left |
+|               | `+`           | Unary plus                | Right-to-left |
+|               | `-`           | Unary minus               | Right-to-left |
+| 4             | `%`           | Modulo / Remainder        | Left-to-right |
+|               | `/`           | Division                  | Left-to-right |
+|               | `*`           | Multiplication            | Left-to-right |
+| 5             | `+`           | Addition                  | Left-to-right |
+|               | `-`           | Subtraction               | Left-to-right |
+| 6             | `&`           | Bitwise AND               | Left-to-right |
+| 7             | `^`           | Bitwise XOR               | Left-to-right |
+| 8             | `|`           | Bitwise OR                | Left-to-right |
+| 9             | `<`           | Less than                 | Left-to-right |
+|               | `<=`          | Less than or equal to     | Left-to-right |
+|               | `>`           | Greater than              | Left-to-right |
+|               | `>=`          | Greater than or equal to  | Left-to-right |
+| 10            | `==`          | Equal to                  | Left-to-right |
+|               | `!=`          | Not equal to              | Left-to-right |
+| 11            | `=`           | Direct assignment         | Right-to-left |
+
+</div>
