@@ -555,6 +555,15 @@ len numberOne = len('#');
 println(numberOne);             # 1
 ```
 
+### `sum()`
+
+The `sum` function returns the sum of all the elements of a number `list`.
+
+```prism
+let numbers = [1000, 7, 30, 300];
+sum(numbers);   # 1337
+```
+
 ### `type()`
 
 The `type` function returns the data type of the object that's passed as the
@@ -566,3 +575,4 @@ println(dataType);                  # STRING
 
 dataType = type({"Cyber": "Punk"});
 println(dataType);                  # HASH
+```
