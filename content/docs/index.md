@@ -92,6 +92,8 @@ explicitly stated, operators are binary.
 |               | `>=`          | Greater than or equal to  | Left-to-right |
 | 10            | `==`          | Equal to                  | Left-to-right |
 |               | `!=`          | Not equal to              | Left-to-right |
-| 11            | `=`           | Direct assignment         | Right-to-left |
+| 11            | `&&`          | Logical AND               | Left-to-right |
+| 12            | `||`          | Logical OR                | Left-to-right |
+| 13            | `=`           | Direct assignment         | Right-to-left |
 
 </div>
