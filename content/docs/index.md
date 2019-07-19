@@ -83,17 +83,19 @@ explicitly stated, operators are binary.
 |               | `*`           | Multiplication            | Left-to-right |
 | 5             | `+`           | Addition                  | Left-to-right |
 |               | `-`           | Subtraction               | Left-to-right |
-| 6             | `&`           | Bitwise AND               | Left-to-right |
-| 7             | `^`           | Bitwise XOR               | Left-to-right |
-| 8             | `|`           | Bitwise OR                | Left-to-right |
-| 9             | `<`           | Less than                 | Left-to-right |
+| 6             | `<<`          | Bitwise Left Shift        | Left-to-right |
+|               | `>>`          | Bitwise Right Shift       | Left-to-right |
+| 7             | `&`           | Bitwise AND               | Left-to-right |
+| 8             | `^`           | Bitwise XOR               | Left-to-right |
+| 9             | `|`           | Bitwise OR                | Left-to-right |
+| 10            | `<`           | Less than                 | Left-to-right |
 |               | `<=`          | Less than or equal to     | Left-to-right |
 |               | `>`           | Greater than              | Left-to-right |
 |               | `>=`          | Greater than or equal to  | Left-to-right |
-| 10            | `==`          | Equal to                  | Left-to-right |
+| 11            | `==`          | Equal to                  | Left-to-right |
 |               | `!=`          | Not equal to              | Left-to-right |
-| 11            | `&&`          | Logical AND               | Left-to-right |
-| 12            | `||`          | Logical OR                | Left-to-right |
-| 13            | `=`           | Direct assignment         | Right-to-left |
+| 12            | `&&`          | Logical AND               | Left-to-right |
+| 13            | `||`          | Logical OR                | Left-to-right |
+| 14            | `=`           | Direct assignment         | Right-to-left |
 
 </div>
