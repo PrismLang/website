@@ -41,15 +41,12 @@ everything = "is possible";
 
 ### None
 
-The `None` data type is used internally for objects which doesn't have any
-value.
-In some languages, a reference type variable can be declared without providing
-an initial explicit value. In these cases, the variables are usually assigned
-`None` value. Prism variables can't hold `None` values. This means that the
-following snippet is invalid:
+The `none` data type is used for objects which doesn't have any value. A
+variable can be declared without providing an initial explicit value. In these
+cases, the variables are usually assigned the `none` value.
 
 ```prism
-let response = None;
+let response = none;
 ```
 
 ### Boolean
@@ -144,11 +141,11 @@ hashTable["traction"] = "speed";
 hashTable["traction"];   # speed
 ```
 
-And if you try to access a key that doesn't exist, Prism will return `None` to
+And if you try to access a key that doesn't exist, Prism will return `none` to
 let you know that no value is mapped to that key:
 
 ```prism
-hashTable["void"];   # None
+hashTable["void"];   # none
 ```
 
 One thing to note here is that hash maps are not ordered in the same way you've
