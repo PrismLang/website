@@ -255,8 +255,11 @@ instead favoring the use of conditional expressions.
 
 ## Loops
 
-Looping in Prism can be done using the `until` expression. If you're familiar
-with other languages, it's similar to the `while` loop.
+No programming language would be complete without a proper some form of
+<abbr title="And that's why HTML is not a programming language.">iteration</abbr>
+(repeated execution of a block of statements) or loops. Prism can iterate
+through the `until` statement. If you're familiar with other languages, it's
+similar to the `while` loop.
 
 If an expression wrapped in parentheses next to a `until` keyword evaluates to
 `true`, then code within that branch (i.e. the immediately-following code that
