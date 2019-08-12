@@ -90,3 +90,8 @@ table tr th {
 table tr td {
   padding: 5px 15px;
 }
+
+abbr[title] {
+  cursor: help;
+  text-decoration: underline dashed;
+}
