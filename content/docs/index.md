@@ -74,28 +74,32 @@ explicitly stated, operators are binary.
 | 0             | `()`          | Parentheses / Grouping    | Left-to-right |
 | 1             | `obj[index]`  | Subscription              | Left-to-right |
 | 2             | `f(args...)`  | Function call             | Left-to-right |
-| 3             | `~`           | Bitwise NOT               | Right-to-left |
+| 3             | `++`          | Post Increment            | Right-to-left |
+|               | `--`          | Post Decrement            | Right-to-left |
+| 4             | `++`          | Pre Increment             | Right-to-left |
+|               | `--`          | Pre Decrement             | Right-to-left |
+|               | `~`           | Bitwise NOT               | Right-to-left |
 |               | `!`           | Logical NOT               | Right-to-left |
 |               | `+`           | Unary plus                | Right-to-left |
 |               | `-`           | Unary minus               | Right-to-left |
-| 4             | `%`           | Modulo / Remainder        | Left-to-right |
+| 5             | `%`           | Modulo / Remainder        | Left-to-right |
 |               | `/`           | Division                  | Left-to-right |
 |               | `*`           | Multiplication            | Left-to-right |
-| 5             | `+`           | Addition                  | Left-to-right |
+| 6             | `+`           | Addition                  | Left-to-right |
 |               | `-`           | Subtraction               | Left-to-right |
-| 6             | `<<`          | Bitwise Left Shift        | Left-to-right |
+| 7             | `<<`          | Bitwise Left Shift        | Left-to-right |
 |               | `>>`          | Bitwise Right Shift       | Left-to-right |
-| 7             | `&`           | Bitwise AND               | Left-to-right |
-| 8             | `^`           | Bitwise XOR               | Left-to-right |
-| 9             | `|`           | Bitwise OR                | Left-to-right |
-| 10            | `<`           | Less than                 | Left-to-right |
+| 8             | `&`           | Bitwise AND               | Left-to-right |
+| 9             | `^`           | Bitwise XOR               | Left-to-right |
+| 10            | `|`           | Bitwise OR                | Left-to-right |
+| 11            | `<`           | Less than                 | Left-to-right |
 |               | `<=`          | Less than or equal to     | Left-to-right |
 |               | `>`           | Greater than              | Left-to-right |
 |               | `>=`          | Greater than or equal to  | Left-to-right |
-| 11            | `==`          | Equal to                  | Left-to-right |
+| 12            | `==`          | Equal to                  | Left-to-right |
 |               | `!=`          | Not equal to              | Left-to-right |
-| 12            | `&&`          | Logical AND               | Left-to-right |
-| 13            | `||`          | Logical OR                | Left-to-right |
-| 14            | `=`           | Direct assignment         | Right-to-left |
+| 13            | `&&`          | Logical AND               | Left-to-right |
+| 14            | `||`          | Logical OR                | Left-to-right |
+| 15            | `=`           | Direct assignment         | Right-to-left |
 
 </div>
