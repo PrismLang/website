@@ -255,7 +255,7 @@ instead favoring the use of conditional expressions.
 
 ## Loops
 
-No programming language would be complete without a proper some form of
+No programming language would be complete without some form of
 <abbr title="And that's why HTML is not a programming language.">iteration</abbr>
 (repeated execution of a block of statements) or loops. Prism can iterate
 through the `until` statement. If you're familiar with other languages, it's
