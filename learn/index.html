@@ -356,6 +356,14 @@ println(foods); # [Pizza, Burger]
 foods = append(foods, "Donut");
 println(foods); # [Pizza, Burger, Donut]
 </code></pre>
+<h3><code>bool()</code></h3>
+<p>The <code>bool</code> function returns the boolean value of the specified data type.</p>
+<pre><code class="language-prism">bool(false)         # false
+bool(0)             # false
+bool(13)            # true
+bool("Traction")    # true
+bool({ "v": 0 })    # true
+</code></pre>
 <h3><code>input()</code></h3>
 <p>The <code>input</code> function is used to take single line input from the user's standard
 input device. When the line with the <code>input()</code> is executed, it waits for the
@@ -385,6 +393,14 @@ println(length);                # 7
 
 len numberOne = len('#');
 println(numberOne);             # 1
+</code></pre>
+<h3><code>str()</code></h3>
+<p>The <code>str</code> function returns the string representation of the specified object.</p>
+<pre><code class="language-prism">str(13)         # "13"
+str(false)      # "false"
+str('#')        # "#"
+str("Traction") # "Traction"
+str({ "v": 0 }) # "{ v: 0 }"
 </code></pre>
 <h3><code>sum()</code></h3>
 <p>The <code>sum</code> function returns the sum of all the elements of a number <code>list</code>.</p>
@@ -442,8 +458,10 @@ println(dataType);                  # HASH
 <p><a href="#built-in-functions">Built-in Functions</a></p>
 <ul>
 <li><a href="#append">append()</a></li>
+<li><a href="#bool">bool()</a></li>
 <li><a href="#input">input()</a></li>
 <li><a href="#len">len()</a></li>
+<li><a href="#str">str()</a></li>
 <li><a href="#sum">sum()</a></li>
 <li><a href="#type">type()</a></li>
 </ul>
