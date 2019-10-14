@@ -511,6 +511,18 @@ foods = append(foods, "Donut");
 println(foods); # [Pizza, Burger, Donut]
 ```
 
+### `bool()`
+
+The `bool` function returns the boolean value of the specified data type.
+
+```prism
+bool(false)         # false
+bool(0)             # false
+bool(13)            # true
+bool("Traction")    # true
+bool({ "v": 0 })    # true
+```
+
 ### `input()`
 
 The `input` function is used to take single line input from the user's standard
@@ -553,6 +565,18 @@ println(length);                # 7
 
 len numberOne = len('#');
 println(numberOne);             # 1
+```
+
+### `str()`
+
+The `str` function returns the string representation of the specified object.
+
+```prism
+str(13)         # "13"
+str(false)      # "false"
+str('#')        # "#"
+str("Traction") # "Traction"
+str({ "v": 0 }) # "{ v: 0 }"
 ```
 
 ### `sum()`
