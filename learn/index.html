@@ -364,6 +364,12 @@ bool(13)            # true
 bool("Traction")    # true
 bool({ "v": 0 })    # true
 </code></pre>
+<h3><code>chr()</code></h3>
+<p>The <code>chr</code> function returns a rune representing a character whose Unicode code
+point is specified. This is the inverse of <code>ord</code>.</p>
+<pre><code class="language-prism">chr(97);    # 'a'
+chr(8364);  # '€'
+</code></pre>
 <h3><code>first()</code></h3>
 <p>The <code>first</code> function returns the first element in the specified list. If the
 list is empty, it returns <code>none</code>.</p>
@@ -409,6 +415,13 @@ println(numberOne);             # 1
 <h3><code>lower()</code></h3>
 <p>The <code>lower</code> function returns the specified string in lowercase.</p>
 <pre><code class="language-prism">lower("Traction");  # "traction"
+</code></pre>
+<h3><code>ord()</code></h3>
+<p>The <code>ord</code> function returns an integer representing the Unicode code point of
+the specified rune or string representing one Unicode character. This is the
+inverse of <code>chr</code>.</p>
+<pre><code class="language-prism">ord('a');   # 97
+ord('€');   # 8364
 </code></pre>
 <h3><code>str()</code></h3>
 <p>The <code>str</code> function returns the string representation of the specified object.</p>
@@ -479,11 +492,13 @@ println(dataType);                  # HASH
 <ul>
 <li><a href="#append">append()</a></li>
 <li><a href="#bool">bool()</a></li>
+<li><a href="#chr">chr()</a></li>
 <li><a href="#first">first()</a></li>
 <li><a href="#input">input()</a></li>
 <li><a href="#last">last()</a></li>
 <li><a href="#len">len()</a></li>
 <li><a href="#lower">lower()</a></li>
+<li><a href="#ord">ord()</a></li>
 <li><a href="#str">str()</a></li>
 <li><a href="#sum">sum()</a></li>
 <li><a href="#type">type()</a></li>
