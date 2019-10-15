@@ -587,6 +587,14 @@ len numberOne = len('#');
 println(numberOne);             # 1
 ```
 
+### `lower()`
+
+The `lower` function returns the specified string in lowercase.
+
+```prism
+lower("Traction");  # "traction"
+```
+
 ### `str()`
 
 The `str` function returns the string representation of the specified object.
@@ -619,4 +627,12 @@ println(dataType);                  # STRING
 
 dataType = type({"Cyber": "Punk"});
 println(dataType);                  # HASH
+```
+
+### `upper()`
+
+The `upper` function returns the specified string in uppercase.
+
+```prism
+upper("Traction");  # "TRACTION"
 ```
