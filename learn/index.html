@@ -364,6 +364,12 @@ bool(13)            # true
 bool("Traction")    # true
 bool({ "v": 0 })    # true
 </code></pre>
+<h3><code>first()</code></h3>
+<p>The <code>first</code> function returns the first element in the specified list. If the
+list is empty, it returns <code>none</code>.</p>
+<pre><code class="language-prism">first([ 1, 3, 3, 7 ]);  # 1
+first([]);              # none
+</code></pre>
 <h3><code>input()</code></h3>
 <p>The <code>input</code> function is used to take single line input from the user's standard
 input device. When the line with the <code>input()</code> is executed, it waits for the
@@ -381,6 +387,12 @@ println(message);       # Hakuna Matata
 prompt to the <code>input</code> function, as shown in the example below:</p>
 <pre><code class="language-prism">let name = input("What's your name? "); # User input: Traction
 println(name);                          # Traction
+</code></pre>
+<h3><code>last()</code></h3>
+<p>The <code>last</code> function returns the last element in the specified list. If the list
+is empty, it returns <code>none</code>.</p>
+<pre><code class="language-prism">last([ 1, 3, 3, 7 ]);   # 7
+last([]);               # none
 </code></pre>
 <h3><code>len()</code></h3>
 <p>The <code>len</code> function is used to find the length of lists, strings and characters
@@ -459,7 +471,9 @@ println(dataType);                  # HASH
 <ul>
 <li><a href="#append">append()</a></li>
 <li><a href="#bool">bool()</a></li>
+<li><a href="#first">first()</a></li>
 <li><a href="#input">input()</a></li>
+<li><a href="#last">last()</a></li>
 <li><a href="#len">len()</a></li>
 <li><a href="#str">str()</a></li>
 <li><a href="#sum">sum()</a></li>
