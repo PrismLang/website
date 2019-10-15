@@ -523,6 +523,16 @@ bool("Traction")    # true
 bool({ "v": 0 })    # true
 ```
 
+### `first()`
+
+The `first` function returns the first element in the specified list. If the
+list is empty, it returns `none`.
+
+```prism
+first([ 1, 3, 3, 7 ]);  # 1
+first([]);              # none
+```
+
 ### `input()`
 
 The `input` function is used to take single line input from the user's standard
@@ -549,6 +559,16 @@ prompt to the `input` function, as shown in the example below:
 ```prism
 let name = input("What's your name? "); # User input: Traction
 println(name);                          # Traction
+```
+
+### `last()`
+
+The `last` function returns the last element in the specified list. If the list
+is empty, it returns `none`.
+
+```prism
+last([ 1, 3, 3, 7 ]);   # 7
+last([]);               # none
 ```
 
 ### `len()`
