@@ -523,6 +523,16 @@ bool("Traction")    # true
 bool({ "v": 0 })    # true
 ```
 
+### `chr()`
+
+The `chr` function returns a rune representing a character whose Unicode code
+point is specified. This is the inverse of `ord`.
+
+```prism
+chr(97);    # 'a'
+chr(8364);  # '€'
+```
+
 ### `first()`
 
 The `first` function returns the first element in the specified list. If the
@@ -593,6 +603,17 @@ The `lower` function returns the specified string in lowercase.
 
 ```prism
 lower("Traction");  # "traction"
+```
+
+### `ord()`
+
+The `ord` function returns an integer representing the Unicode code point of
+the specified rune or string representing one Unicode character. This is the
+inverse of `chr`.
+
+```prism
+ord('a');   # 97
+ord('€');   # 8364
 ```
 
 ### `str()`
