@@ -72,10 +72,10 @@ In the example below, `count` is a variable of assigned an initial value of
 let count = 13;
 ```
 
-### Characters
+### Rune
 
-Character is a data type that can only hold one character. Characters in Prism
-are defined with single quotes.
+Rune is a data type that represent unicode codepoints. Runes in Prism are
+defined with single quotes.
 
 ```prism
 let hashTag = '#';
@@ -113,11 +113,11 @@ magicNumbers[3]; # 13
 ### Hash Maps
 
 A hash map is a data type that works with keys and values. Each value in a hash
-map can be accessed using a key, which can be either Boolean, Integer, Character
-or String. This key is hashed to make a hash key and this hash key is what is
+map can be accessed using a key, which can be either Boolean, Integer, Rune or
+String. This key is hashed to make a hash key and this hash key is what is
 actually mapped to the value. The keys and values can be any valid Prism
 expression. The only constraint is that the key expression should evaluate to
-any Hashable type - i.e. Boolean, Integer, Character or String.
+any Hashable type - i.e. Boolean, Integer, Rune or String.
 
 ```prism
 let null = "0x00";
@@ -583,18 +583,30 @@ last([]);               # none
 
 ### `len()`
 
-The `len` function is used to find the length of lists, strings and characters
-(well, length of character will always be `1`).
+The `len` function is used to find the number of elements in a lists, pairs in a
+hash map, unicode codepoints in a strings or rune.
 
 ```prism
-let size = len([ 13, 42 ]);
-println(size);                  # 2
+let arraySize = len([ 13, 42 ]);
+println(arraySize);             # 2
 
-let length = len("Starman");
-println(length);                # 7
+let hashSize = len({
+    "user": "Traction",
+    "username": "k3rn31p4nic",
+});
+println(hashSize);              # 2
 
-len numberOne = len('#');
-println(numberOne);             # 1
+let stringLength = len("Starman");
+println(stringLength);          # 7
+
+stringLength = len("😂");
+println(stringLength);          # 3
+
+len runeLength = len('#');
+println(runeLength);            # 1
+
+runeLength = len('€');
+println(runeLength);            # 3
 ```
 
 ### `lower()`
