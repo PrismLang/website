@@ -628,6 +628,19 @@ ord('a');   # 97
 ord('€');   # 8364
 ```
 
+### `reverse()`
+
+The `reverse` function is used to reverse a `list`. It returns a new `list` with
+the elements in reverse order and the original list remains unchanged.
+
+```prism
+let leet = [1, 3, 3, 7];
+let revLeet = reverse(leet);
+
+print(leet);                    # [1, 3, 3, 7]
+print(revLeet);                 # [7, 3, 3, 1]
+```
+
 ### `str()`
 
 The `str` function returns the string representation of the specified object.
