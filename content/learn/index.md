@@ -701,8 +701,8 @@ objects.
 ```prism
 import moduleOne;
 
-print(moduleOne["Name"]);   # traction13
-print(moduleOne["user"]);   # none
+print(moduleOne.Name);   # traction13
+print(moduleOne.user);   # none
 ```
 
 A package is a collection of multiple modules in one directory. You can `import`
@@ -728,7 +728,7 @@ namespace.
 ```prism
 >>> import packageOne;
 <module "packageOne">
->>> packageOne["SomeVar"];
+>>> packageOne.SomeVar;
 "SomeValue"
 ```
 
