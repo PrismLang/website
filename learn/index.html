@@ -482,8 +482,8 @@ let Name = user + str(id);
 objects.</p>
 <pre><code class="language-prism">import moduleOne;
 
-print(moduleOne["Name"]);   # traction13
-print(moduleOne["user"]);   # none
+print(moduleOne.Name);   # traction13
+print(moduleOne.user);   # none
 </code></pre>
 <p>A package is a collection of multiple modules in one directory. You can <code>import</code>
 a package and all the exported objects in all the modules in that package will
@@ -502,7 +502,7 @@ And all the exported objects in those modules can be accessed using the same
 namespace.</p>
 <pre><code class="language-prism">>>> import packageOne;
 &#x3C;module "packageOne">
->>> packageOne["SomeVar"];
+>>> packageOne.SomeVar;
 "SomeValue"
 </code></pre>
 <p>Any object in a module that has a name binding starting with an uppercase
