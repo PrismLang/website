@@ -682,3 +682,56 @@ The `upper` function returns the specified string in uppercase.
 ```prism
 upper("Traction");  # "TRACTION"
 ```
+
+## Modules and Packages
+
+Every Prism source file is a module. You can `import` exported objects from any
+module and they will be available under the same namespace.
+
+```prism
+# moduleOne.prism
+let id = 13;
+let user = "traction";
+let Name = user + str(id);
+```
+
+Now you can import `moduleOne` in any other Prism code and use the exported
+objects.
+
+```prism
+import moduleOne;
+
+print(moduleOne["Name"]);   # traction13
+print(moduleOne["user"]);   # none
+```
+
+A package is a collection of multiple modules in one directory. You can `import`
+a package and all the exported objects in all the modules in that package will
+be available under the same namespace. That means, if you've multiple objects
+with the same name, it'll be overriden by the object that's imported at last in
+the lexical order of importing the modules.
+
+
+If your package directory structure is something like this:
+```
+packageOne/moduleOne.prism
+packageOne/moduleTwo.prism
+packageOne/subPackage/moduleThree.prism
+```
+
+You can import all the modules under `packageOne` by just importing the package.
+Note that, modules in subdirectories won't be imported. So, in this case, only
+`moduleOne` and `moduleTwo` will be imported under the `packageOne` namespace.
+And all the exported objects in those modules can be accessed using the same
+namespace.
+
+```prism
+>>> import packageOne;
+<module "packageOne">
+>>> packageOne["SomeVar"];
+"SomeValue"
+```
+
+Any object in a module that has a name binding starting with an uppercase
+character is exported from that module. All the other objects are private to
+that module. And you can export any number of objects from a module.
