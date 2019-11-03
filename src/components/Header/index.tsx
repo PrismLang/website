@@ -24,9 +24,10 @@ const HeaderLogo: React.FunctionComponent = () => (
               }}>
                 <Logo size="40" />
                 <div css={{
-                    marginLeft: 3,
+                    marginTop: 4.5, // Because font has a little padding at the bottom.
+                    marginLeft: 15,
                     textTransform: "uppercase",
-                    fontSize: "1.5em",
+                    fontSize: "1.2em",
                 }}>P r i s m</div>
               </Link>
         }
