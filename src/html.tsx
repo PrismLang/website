@@ -42,7 +42,7 @@ export default (props: IHTMLProps) => {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7349fe" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9f82fe" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#000000" />
 
@@ -51,7 +51,7 @@ export default (props: IHTMLProps) => {
       <body id="___traction" {...props.bodyAttributes}>
         { props.preBodyComponents }
         <noscript key="noscript" id="gatsby-noscript">
-          This app works best with JavaScript enabled.
+          Guess we won't know what's in here without enabling JavaScript?
         </noscript>
         <div
           key={`body`}
