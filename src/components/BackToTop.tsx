@@ -1,14 +1,23 @@
 import React from "react";
 
-import Logo from "./Logo";
 import isBrowser from "../utils/isBrowser";
+
+import arrow from "../data/arrow.png";
 
 const BackToTop: React.FunctionComponent = () => (
     <div
         css={{
             position: "fixed",
-            right: 10,
-            bottom: 20,
+            right: 15,
+            bottom: 15,
+            height: 40,
+            width: 45,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: 3,
+            backgroundColor: "black",
+            boxShadow: "0 5px 20px -10px rgba(0, 0, 0, .5)",
             cursor: "pointer",
             transition: "opacity .125s ease-out, filter .125s ease-out, transform .125s ease-out",
             opacity: .5,
@@ -25,7 +34,10 @@ const BackToTop: React.FunctionComponent = () => (
             behavior: "smooth",
         })}
     >
-        <Logo size="50" />
+        <img
+            src={ arrow }
+            height={ 25 }
+        />
     </div>
 );
 
