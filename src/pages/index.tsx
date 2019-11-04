@@ -6,6 +6,7 @@ import { COLORS } from "../utils/constants";
 import getLastPushTime from "../utils/getLastPushTime";
 
 import installers from "../data/installers.yml";
+import getPlatform from "../utils/getPlatform";
 
 class IndexPage extends React.PureComponent {
     state = {
@@ -95,7 +96,9 @@ class IndexPage extends React.PureComponent {
                             <a key={ i } href={ installer.link } css={{
                                 margin: 10,
                             }}>
-                                <button>
+                                <button css={{
+                                    backgroundColor: installer.os === getPlatform() ? "#9f82fe" : "darkgrey",
+                                }}>
                                     { installer.os }
                                 </button>
                             </a>
