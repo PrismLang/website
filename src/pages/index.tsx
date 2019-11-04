@@ -72,7 +72,7 @@ class IndexPage extends React.PureComponent {
                 </p>
                 <p>
                     <strong>
-                        To install Prism in your computer, run these installers as superuser/Administrator.
+                        To install Prism in your computer, run the installer as superuser (Administrator).
                     </strong>
                 </p>
                 <p>
