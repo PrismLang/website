@@ -1,4 +1,5 @@
 export default () => {
+    if (typeof window === "undefined") return;
     if (!window.navigator.platform) return;
 
     if (window.navigator.platform.toLowerCase().startsWith("linux")) return "Linux";
