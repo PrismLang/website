@@ -72,7 +72,8 @@ explicitly stated, operators are binary.
 | Precedence    | Operator      | Description               | Associativity |
 | :-----------: | ------------- | ------------------------- | ------------- |
 | 0             | `()`          | Parentheses / Grouping    | Left-to-right |
-| 1             | `obj[index]`  | Subscription              | Left-to-right |
+| 1             | `obj.attr`    | Attribute access          | Left-to-right |
+|               | `obj[key]`    | Subscription              | Left-to-right |
 | 2             | `f(args...)`  | Function call             | Left-to-right |
 | 3             | `++`          | Post Increment            | Right-to-left |
 |               | `--`          | Post Decrement            | Right-to-left |
