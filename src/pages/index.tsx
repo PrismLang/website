@@ -97,7 +97,7 @@ class IndexPage extends React.PureComponent {
                                 margin: 10,
                             }}>
                                 <button css={{
-                                    backgroundColor: installer.os === getPlatform() ? "#9f82fe" : "darkgrey",
+                                    // backgroundColor: installer.os === getPlatform() ? "#9f82fe" : "darkgrey",
                                 }}>
                                     { installer.os }
                                 </button>
