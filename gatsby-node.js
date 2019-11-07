@@ -46,6 +46,7 @@ exports.createPages = ({ graphql, actions }) => {
                 switch (node.fields.source) {
                     case "docs":
                     case "learn":
+                    case "packages":
                         template = "./src/templates/learn.tsx";
                         break;
 
