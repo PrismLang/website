@@ -28,7 +28,9 @@ const HeaderLogo: React.FunctionComponent = () => (
                     marginLeft: 15,
                     textTransform: "uppercase",
                     fontSize: "1.2em",
-                }}>P r i s m</div>
+                    lineBreak: "none",
+                    letterSpacing: 5,
+                }}>Prism</div>
               </Link>
         }
     </div>
