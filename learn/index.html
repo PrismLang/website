@@ -370,6 +370,12 @@ point is specified. This is the inverse of <code>ord</code>.</p>
 <pre><code class="language-prism">chr(97);    # 'a'
 chr(8364);  # '€'
 </code></pre>
+<h3><code>dir()</code></h3>
+<p>The <code>dir</code> function attempt to return a list of valid attributes for the
+specified object.</p>
+<pre><code class="language-prism">dir({ "answer": 42 });  # ["keys", "values"]
+dir(math);  # ["Sqrt2", "MaxInt", "Log10E", "E", "Ln10", "MaxFloat", "MinInt", "SqrtPi", "Log2E", "SmallestNonzeroFloat", "Pi", "SqrtE", "Ln2", "Phi", "SqrtPhi"]
+</code></pre>
 <h3><code>first()</code></h3>
 <p>The <code>first</code> function returns the first element in the specified list. If the
 list is empty, it returns <code>none</code>.</p>
@@ -552,6 +558,7 @@ that module. And you can export any number of objects from a module.</p></div></
 <li><a href="#append">append()</a></li>
 <li><a href="#bool">bool()</a></li>
 <li><a href="#chr">chr()</a></li>
+<li><a href="#dir">dir()</a></li>
 <li><a href="#first">first()</a></li>
 <li><a href="#input">input()</a></li>
 <li><a href="#last">last()</a></li>
