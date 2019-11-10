@@ -533,6 +533,16 @@ chr(97);    # 'a'
 chr(8364);  # '€'
 ```
 
+### `dir()`
+
+The `dir` function attempt to return a list of valid attributes for the
+specified object.
+
+```prism
+dir({ "answer": 42 });  # ["keys", "values"]
+dir(math);  # ["Sqrt2", "MaxInt", "Log10E", "E", "Ln10", "MaxFloat", "MinInt", "SqrtPi", "Log2E", "SmallestNonzeroFloat", "Pi", "SqrtE", "Ln2", "Phi", "SqrtPhi"]
+```
+
 ### `first()`
 
 The `first` function returns the first element in the specified list. If the
