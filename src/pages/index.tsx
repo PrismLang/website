@@ -10,6 +10,7 @@ import getPlatform from "../utils/getPlatform";
 
 class IndexPage extends React.PureComponent {
     state = {
+        platform: getPlatform(),
         lastBuildDate: new Date(0),
     };
 
@@ -97,7 +98,7 @@ class IndexPage extends React.PureComponent {
                                 margin: 10,
                             }}>
                                 <button css={{
-                                    // backgroundColor: installer.os === getPlatform() ? "#9f82fe" : "darkgrey",
+                                    backgroundColor: installer.os === this.state.platform ? "#9f82fe" : "darkgrey",
                                 }}>
                                     { installer.os }
                                 </button>
