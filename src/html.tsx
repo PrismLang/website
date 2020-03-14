@@ -14,6 +14,7 @@ export default (props: IHTMLProps) => {
     <html lang="en" { ...props.htmlAttributes }>
       <head>
         <meta charSet="utf-8" />
+        <meta name="robots" content="noodp" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="viewport"
