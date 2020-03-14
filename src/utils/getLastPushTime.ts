@@ -3,7 +3,7 @@ import isBrowser from "./isBrowser";
 export default async () => {
     if (!isBrowser()) return;
 
-    let response = await window.fetch("https://api.github.com/repos/PrismLang/binaries", {
+    const response = await window.fetch("https://api.github.com/repos/PrismLang/binaries", {
         method: "GET",
         headers: {
             "Accept": "application/json",
