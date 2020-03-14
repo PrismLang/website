@@ -107,7 +107,7 @@ class IndexPage extends React.PureComponent {
                 </div>
                 <p>
                     If you don't prefer the installer, you can grab the Prism binaries from
-                    <a href="https://github.com/PrismLang/binaries" target="_blank" title="Prism binaries"> here </a>
+                    <a href="https://github.com/PrismLang/binaries" target="_blank" title="Prism binaries" rel="noopener noreferrer"> here </a>
                     and run it from wherever you like.
                 </p>
             </div>

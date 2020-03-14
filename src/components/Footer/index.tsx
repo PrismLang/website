@@ -10,7 +10,7 @@ interface ISocialLinkProps {
     }
 }
 const SocialLink: React.FunctionComponent<ISocialLinkProps> = (props) => (
-    <a href={ props.link.href } title={ props.link.title } target="_blank" css={{
+    <a href={ props.link.href } title={ props.link.title } target="_blank" rel="noopener noreferrer" css={{
         color: "inherit",
         fontSize: "1.5em",
         margin: 5,
